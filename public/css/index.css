@@ -1,0 +1,14 @@
+#containerGeral
+{
+    padding:10px;
+}
+
+#modalAddUser
+{
+    display: none;
+}
+
+#modalEditUser
+{
+    display: none;
+}
