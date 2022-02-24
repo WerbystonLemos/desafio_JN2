@@ -63,11 +63,11 @@ class User extends Model
         $newData                = [];
         $newData['name']        = $data->name;
         $newData['fone_number'] = $data->fone;
-        // $newData['auto_id']     = $data->plate;
+        $newData['auto_id']     = $data->idPlate;
         $newData['cpf']         = $data->cpf;
 
         $this->updateCarro($data->plate, $idUser);
-        dd( User::where('id', $idUser )->update( $newData ) );
+        return User::where('id', $idUser )->update( $newData );
     }
 
     // Edit Carro

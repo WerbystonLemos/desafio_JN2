@@ -79,6 +79,7 @@
                         </div>
 
                         <input id="iptEditIdPlaca" name="iptEditIdPlaca" type="hidden" val="">
+                        <input id="iptEditIdUser" name="iptEditIdUser" type="hidden" val="">
                         <div class="form-group">
                             <label for="iptEditPlaca">Placa</label>
                             <input type="text" class="form-control" id="iptEditPlaca" name="iptEditPlaca" aria-describedby="iptEditPlaca" placeholder="Digite a placa do veículo.">
@@ -89,7 +90,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" onclick="saveEditUsuario()">Salvar</button>
+                <button id="btnSaveModalEdit" type="button" class="btn btn-success" onclick="updateUsuario()">Salvar</button>
                 <button type="button" class="btn btn-primary" onclick="fechaModalAddUsuario('modalEditUser')">Cancelar</button>
             </div>
 

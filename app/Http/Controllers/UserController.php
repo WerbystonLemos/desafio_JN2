@@ -75,7 +75,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = new User;
-        $user->updateUser($request, $id);
+        return $user->updateUser($request, $id);
     }
 
     /**

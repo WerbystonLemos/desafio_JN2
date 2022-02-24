@@ -81,28 +81,29 @@ function populaModalEdit(dados)
     $("#iptEditCpf").val(dados.cpf)
     $("#iptEditPlaca").val(dados.plate)
     $("#iptEditIdPlaca").val(dados.auto_id)
+    $("#iptEditIdUser").val(dados.id)
 }
 
+
 // update registro
-function updateUsuario(id)
+function updateUsuario()
 {
+    let id = $("#iptEditIdUser").val()
+
     let dados = {
-                "name":     $("#iptEditNome").val(),
-                "fone":     $("#iptEditFone").val(),
-                "cpf":      $("#iptEditCpf").val(),
-                "plate":    $("#iptEditPlaca").val(),
-                "idPlate":  $("#iptEditIdPlaca").val(dados.auto_id)
+        "name":     $("#iptEditNome").val(),
+        "fone":     $("#iptEditFone").val(),
+        "cpf":      $("#iptEditCpf").val(),
+        "idPlate":  $("#iptEditIdPlaca").val(),
+        "plate":    $("#iptEditPlaca").val()
     }
 
     $.ajax({
         url: `./api/cliente/${id}`,
+        method: "put",
         data: dados,
-        success: (res) => {
-            // atualizar tabela
-            // redirecionar p index
-            console.log(res)
-        },
-        error: (err) => sconsole.log(res)
+        success: (res) => location.reload(),
+        error: (err) => console.log(res)
     })
 }
 // Deletar usaário
